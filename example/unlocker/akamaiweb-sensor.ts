@@ -14,7 +14,7 @@ const webUnlocker = async () => {
   const scrapeless = new Scrapeless({ apiKey });
 
   try {
-    const result = scrapeless.unlocker({
+    const result = await scrapeless.unlocker({
       actor,
       input: inputData,
     });

@@ -30,7 +30,7 @@ const solveCaptcha = async () => {
 
 const getCaptchaResult = async (taskId: string) => {
   try {
-    const result = scrapeless.getCaptchaResult(taskId);
+    const result = await scrapeless.getCaptchaResult(taskId);
 
     console.log(result);
   } catch (error) {

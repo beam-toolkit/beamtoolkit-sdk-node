@@ -54,7 +54,10 @@ const plugins = [
 ];
 
 if (process.env.NODE_ENV === 'production') {
-  plugins.push(terser());
+  plugins.push(terser({
+    keep_classnames: true,
+    keep_fnames: true,
+  }));
 }
 
 export default defineConfig([

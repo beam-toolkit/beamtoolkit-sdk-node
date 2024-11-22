@@ -11,6 +11,8 @@ Start using the API with your [API KEY](https://app.scrapeless.com/dashboard/acc
 
 For more examples, please refer to the `examples` directory
 
+For more information, please refer to our [documentation](https://docs.scrapeless.com/)
+
 ### Scraping API
 
 ```js
