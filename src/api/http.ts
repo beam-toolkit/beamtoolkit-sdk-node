@@ -1,7 +1,7 @@
 import axios, { AxiosRequestConfig, AxiosError } from 'axios';
 
 const instance = axios.create({
-  baseURL: 'https://gateway.dataship.io/api/v1',
+  baseURL: 'https://api.scrapeless.com/api/v1',
   timeout: 60000,
 });
 
