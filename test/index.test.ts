@@ -60,4 +60,17 @@ describe('Scrapeless', () => {
 
     expect(captchaRes).to.be.an('object');
   })
+
+  it('solver captcha', async () => {
+    const res = await scrapeless.solverCaptcha({
+      actor: 'captcha.recaptcha',
+      input: {
+        version: 'v2',
+        pageURL: 'https://venue.cityline.com',
+        siteKey: '6Le_J04UAAAAAIAfpxnuKMbLjH7ISXlMUzlIYwVw'
+      }
+    }, 8000);
+
+    expect(res).to.be.an('object');
+  })
 });

@@ -1,36 +1,24 @@
 import Scrapeless from 'scrapeless-sdk-node';
 
-const apiKey = 'YOUR-API-KEY';
-const actor = 'captcha.recaptcha.enterprise';
+const apiKey = 'AC0D22E2D7A64C87C5683D3F6D2CD1AC';
+const actor = 'captcha.recaptcha';
 const scrapeless = new Scrapeless({ apiKey });
 
 const solveCaptcha = async () => {
   const inputData = {
     version: "v3",
-    pageURL: "https://www.google.com",
-    siteKey: "6Le-wvkSAAAAAPBMRTvw0Q4Muexq9bi0DJwx_mJ-",
+    pageURL: "https://recaptcha-demo.appspot.com/",
+    siteKey: "6Le80pApAAAAANg24CMbhL_U2PASCW_JUnq5jPys",
     pageAction: "scraping",
     invisible: false,
   };
 
   try {
-    const result = await scrapeless.captcha({
+    const result = await scrapeless.solverCaptcha({
       actor,
       input: inputData,
       proxy: {},
-    });
-
-    console.log(result);
-
-    await getCaptchaResult(result.taskId);
-  } catch (error) {
-    console.error(error);
-  }
-}
-
-const getCaptchaResult = async (taskId: string) => {
-  try {
-    const result = await scrapeless.getCaptchaResult(taskId);
+    }, 10000);
 
     console.log(result);
   } catch (error) {

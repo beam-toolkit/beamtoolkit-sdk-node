@@ -13,7 +13,7 @@ const solveCaptcha = async () => {
   };
 
   try {
-    const result = await scrapeless.captcha({
+    const result = await scrapeless.createCaptchaTask({
       actor,
       input: inputData,
     });
@@ -28,7 +28,7 @@ const solveCaptcha = async () => {
 
 const getCaptchaResult = async (taskId: string) => {
   try {
-    const result = await scrapeless.getCaptchaResult(taskId);
+    const result = await scrapeless.getCaptchaTaskResult(taskId);
 
     console.log(result);
   } catch (error) {

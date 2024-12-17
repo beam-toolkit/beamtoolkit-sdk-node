@@ -54,13 +54,14 @@ import Scrapeless from 'scrapeless-sdk-node';
 
 ### Captcha Solver
 
+#### Create captcha task
 ```js
 import Scrapeless from 'scrapeless-sdk-node';
 
 (async () => {
   const scrapeless = new Scrapeless({ apiKey: 'YOUR-API-KEY' });
 
-  const result = await scrapeless.captcha({
+  const result = await scrapeless.createCaptchaTask({
     actor: 'captcha.recaptcha',
     input: {
       version: "v2",
@@ -69,6 +70,34 @@ import Scrapeless from 'scrapeless-sdk-node';
       pageAction: ""
     }
   })
+})();
+```
+
+#### Get captcha task result
+```js
+import Scrapeless from 'scrapeless-sdk-node';
+
+(async () => {
+  const scrapeless = new Scrapeless({ apiKey: 'YOUR-API-KEY' });
+  const result = await scrapeless.getCaptchaTaskResult('task-id');
+})();
+```
+
+#### Solver captcha
+```js
+import Scrapeless from 'scrapeless-sdk-node';
+
+(async () => {
+  const scrapeless = new Scrapeless({ apiKey: 'YOUR-API-KEY' });
+  const result = await scrapeless.solverCaptcha({
+    actor: 'captcha.recaptcha',
+    input: {
+      version: "v2",
+      pageURL: "https://www.google.com",
+      siteKey: "6Le-wvkSAAAAAPBMRTvw0Q4Muexq9bi0DJwx_mJ-",
+      pageAction: ""
+    }
+  }, 5000);
 })();
 ```
 
