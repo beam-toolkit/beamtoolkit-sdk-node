@@ -1,6 +1,6 @@
 import Scrapeless from 'scrapeless-sdk-node';
 
-const apiKey = 'AC0D22E2D7A64C87C5683D3F6D2CD1AC';
+const apiKey = 'YOUR-API-KEY';
 const actor = 'captcha.recaptcha';
 const scrapeless = new Scrapeless({ apiKey });
 

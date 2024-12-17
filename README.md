@@ -49,6 +49,8 @@ import Scrapeless from 'scrapeless-sdk-node';
       redirect: false,
     }
   });
+
+  console.log(result)
 })();
 ```
 
@@ -70,6 +72,8 @@ import Scrapeless from 'scrapeless-sdk-node';
       pageAction: ""
     }
   })
+
+  console.log(result)
 })();
 ```
 
@@ -80,6 +84,8 @@ import Scrapeless from 'scrapeless-sdk-node';
 (async () => {
   const scrapeless = new Scrapeless({ apiKey: 'YOUR-API-KEY' });
   const result = await scrapeless.getCaptchaTaskResult('task-id');
+
+  console.log(result)
 })();
 ```
 
@@ -98,6 +104,8 @@ import Scrapeless from 'scrapeless-sdk-node';
       pageAction: ""
     }
   }, 5000);
+
+  console.log(result)
 })();
 ```
 
