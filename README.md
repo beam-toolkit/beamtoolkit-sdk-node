@@ -1,4 +1,4 @@
-# Scrapeless Node.js SDK
+# Beam Toolkit Node.js SDK
 
 ## Install
 ```shell
